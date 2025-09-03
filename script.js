@@ -101,12 +101,12 @@ function endgame(){
 function newgame(){
     const newgamebutton = document.querySelector("#newgame");
     newgamebutton.addEventListener("click", function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     randomnumber = parseInt(Math.random() * 100 + 1);
      perguess = [];
     numguess = 1;
     guessSlot.innerHTML = "";
-    remaining.inner = `${11 - numguess}`;
+    remaining.innerHTML = `${11 - numguess}`;
     userinput.removeAttribute("disabled");
     startover.removeChild(p);
     playgame = true;
