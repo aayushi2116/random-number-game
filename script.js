@@ -44,7 +44,7 @@ function validateguess(guess) {
     else{
         perguess.push(guess)
 
-         if (numguess === 11) {
+         if (numguess == 11) {
       displayguess(guess);
       displaymessage(`Game over Random number was ${randomnumber}`);
       endgame();
@@ -61,6 +61,7 @@ function validateguess(guess) {
 function checkguess(guess){
     if(guess==randomnumber){
         displaymessage(`you guessed it right`)
+        endgame();
     }
     else if(guess<randomnumber){
         displaymessage(`too low`)
