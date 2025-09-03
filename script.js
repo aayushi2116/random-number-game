@@ -61,7 +61,7 @@ function validateguess(guess) {
 
    
 function checkguess(guess){
-   function checkguess(guess){
+   
     const difference = Math.abs(guess - randomnumber);
 
     if (guess == randomnumber){
@@ -95,7 +95,7 @@ function checkguess(guess){
 }
 
 
-}
+
 
 
 
