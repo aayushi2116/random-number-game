@@ -61,16 +61,39 @@ function validateguess(guess) {
 
    
 function checkguess(guess){
-    if(guess==randomnumber){
-        displaymessage(`you guessed it right`)
+   function checkguess(guess){
+    const difference = Math.abs(guess - randomnumber);
+
+    if (guess == randomnumber){
+        displaymessage(`You guessed it right`);
         endgame();
     }
-    else if(guess<randomnumber){
-        displaymessage(`too low`)
+    else if (difference > 20) {
+        if (guess < randomnumber) {
+            displaymessage(`Too low`);
+        } else {
+            displaymessage(`Too high`);
+        }
     }
-    else if(guess>randomnumber){
-        displaymessage(`too high`)
+    else if (difference <= 20 && difference > 10) {
+        if (guess < randomnumber) {
+            displaymessage(`A bit low, coming closer`);
+        } else {
+            displaymessage(`A bit high, coming closer`);
+        }
     }
+    else if (difference <= 10 && difference > 5) {
+        if (guess < randomnumber) {
+            displaymessage(`Close! Almost there`);
+        } else {
+            displaymessage(`Close! Almost there`);
+        }
+    }
+    else if (difference <= 5) {
+        displaymessage(`Very close! Almost there`);
+    }
+}
+
 
 }
 
