@@ -19,6 +19,8 @@ if(playgame){
     submit.addEventListener("click",function(e){
         e.preventDefault();
 
+        if (!playgame) return;
+
         const guess = parseInt(userinput.value);
         console.log(guess);
 
@@ -90,7 +92,7 @@ function endgame(){
     userinput.value = "";
     userinput.setAttribute("disabled", "");
     p.classList.add("button");
-    p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+    p.innerHTML = `<h2 id="newgame">Start new Game</h2>`;
     startover.appendChild(p);
     playgame = false;
     newgame();
